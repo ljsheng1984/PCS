@@ -1,0 +1,82 @@
+* {margin:0;padding:0;}
+body {color:#444;font-size:12px;font-family:arial,simsun;line-height:1.5;}
+ul,dl {list-style:none;}
+img {border:0}
+textarea, input {color:#444;font-family:Arial;font-size:12px;}
+a {color:#3b4c65;text-decoration:none;}
+a:hover {text-decoration:underline;}
+.cf:before, .cf:after {content:"";display:table;}
+.cf:after {clear:both;}
+.cf {zoom:1;}
+em {font-style:normal;}
+.head {height:78px;background:url(../images/head.png) left center no-repeat;}
+.hcon {color:#d1ecff;line-height:50px;margin-right:10px;margin-left:20px;height:78px;overflow:hidden;}
+.hcon p {text-align:right;float:right;}
+.hcon strong {color:#fff;margin-right:15px;}
+.hcon p a {color:#b7d2ff;margin:0 10px;}
+.menu {margin:0 auto;width:100%;_width:auto;float:left;display:inline;1border-top:1px solid #256ea5;border-bottom:1px solid #ddd;}
+.menu h2 {position:relative;height:34px;line-height:34px;line-height:36px\9;overflow:hidden;text-indent:22px;display:block;font-size:12px;cursor:pointer;padding:0 15px;background:#d9ebf3;font-weight:normal;color:#333;border-bottom:1px solid #a9c7d4;border-top:1px solid #fff;}
+.menu h2:hover,.menu .hover {background:#d9ebf3;}
+.menu h2 img {position:absolute;left:17px;top:8px;}
+.menu ul {display:none;padding:10px 0;}
+.t_menu {float:left;margin-top:17px;margin-right:20px;margin-left:20px;}
+.t_menu em {display:block;font-style:normal;font-size:18px;color:#fff;margin-bottom:-2px;}
+.t_menu a {float:left;background:#4d9cf5;padding:3px 10px;border:1px solid #a2ceff;line-height:20px;margin:0 5px;color:#00336c;cursor:pointer;text-align:center;}
+.t_menu a:hover {background:#65adfd;text-decoration:none;}
+
+.menu ul li a {display:block;padding-left:25px;outline:none;height:28px;line-height:28px;color:#333;margin:0 12px;1border-top:1px solid #297cc1;border-radius:5px;}
+.menu li a:hover {color:#333;background:#eee;text-decoration:none;1border-top:1px solid #2e88d2;}
+.menu li .cur,.menu li .cur:hover {color:#fff;background:#0f97df url(../images/arr2.png) no-repeat 14px center;1border-top:1px solid #1c6095;}
+
+.title {height:35px;border-bottom:1px solid #fff;background:url(../images/h2.gif)}
+.title p {height:35px;line-height:35px;border-bottom:1px solid #ccc;padding-left:28px;color:#3d4e67;background:url(../images/arr1.gif) no-repeat 13px 12px;line-height:35px\9;overflow:hidden;font-family:SimSun;1border-top:1px solid #2d85c8}
+.title em {font-style:normal;}
+.dtit {height:35px;line-height:35px;font-size:14px;font-weight:bold;color:#fff;background:url(../images/mt.png);border-top:1px solid #2071af;border-bottom:1px solid #1f669c;text-indent:18px;_padding-top:8px;_height:27px;}
+.dtit img {margin:0 4px -3px 0;}
+.tab {height:100%;width:100%;display-layout:fixed;}
+.td {height:100%;word-break:break-all;}
+.main {height:100%;width:669px;margin:0 auto;text-align:center;height:380px;margin-top:-40px;position:relative;}
+.bg {width:100%;height:100%;}
+.logo {position:absolute;top:-175px;left:260px;width:467px;height:147px;background:url(../images/logo.png) no-repeat;_background:url(../images/logo.gif);}
+.bot {text-align:center;color:#888;position:absolute;bottom:-88px;text-align:center;width:100%;left:0;width:665px;height:30px;_bottom:-23px;}
+.t_logo {float:left;font-size:26px;color:#fff;line-height:78px;font-family:Î¢ÈíÑÅºÚ;}
+.t_logo img {height:40px;float:left;margin-top:18px;margin-right:7px;}
+
+/*cloud*/
+#mainBody {width:100%;height:100%;position:absolute;z-index:-1;}
+.cloud {position:absolute;top:0px;left:0px;width:100%;height:100%;background:url(../images/cloud.png) no-repeat;z-index:1;opacity:0.5;}
+#cloud2 {z-index:2;}
+/*login*/
+.logintop{height:47px; position:absolute; top:0; background:url(../images/loginbg1.png) repeat-x;z-index:100; width:100%;}
+.logintop span{color:#fff; line-height:47px; background:url(../images/loginsj.png) no-repeat 21px 18px; text-indent:44px; color:#afc5d2; float:left;}
+.logintop ul{float:right; padding-right:30px;}
+.logintop ul li{float:left; margin-left:20px; line-height:47px;}
+.logintop ul li a{color:#afc5d2;}
+.logintop ul li a:hover{color:#fff;}
+.loginbody{background:url(../images/loginbg3.png) no-repeat center center; width:100%; height:585px; overflow:hidden; position:absolute; top:47px;}
+.systemlogo{background:url(../images/loginlogo.png) no-repeat center;width:100%; height:71px; margin-top:75px;}
+.loginbox{width:692px; height:336px; background:url(../images/logininfo.png) no-repeat; margin-top:30px;}
+.loginbox ul{margin-top:88px; margin-left:285px;}
+.loginbox ul li{margin-bottom:25px;}
+.loginbox ul li label{color:#687f92; padding-left:25px;}
+.loginbox ul li label a{color:#687f92;}
+.loginbox ul li label a:hover{color:#3d96c9;}
+.loginbox ul li label input{margin-right:5px;}
+.loginbox,.loginbox1,.loginbox2,.loginbox3,.loginbox4{width:692px; height:373px;margin-top:10px;}
+.loginuser{width:299px; height:48px; background:url(../images/loginuser.png) no-repeat; border:none; line-height:48px; padding-left:44px; font-size:14px; font-weight:bold;}
+.loginpwd{width:299px; height:48px; background:url(../images/loginpassword.png) no-repeat; border:none;line-height:48px; padding-left:44px; font-size:14px; color:#90a2bc;}
+.loginbtn{width:111px;height:35px; background:url(../images/buttonbg.png) repeat-x; font-size:14px; font-weight:bold; color:#fff;cursor:pointer; line-height:35px;border:0;}
+.loginbm{height:50px; line-height:50px; text-align:center; background:url(../images/loginbg2.png) repeat-x;position:absolute; bottom:0; width:100%; color:#0b3a58;}
+.loginbm a{font-weight:bold;color:#0b3a58;}
+.loginbm a:hover{color:#fff;}
+
+.loginbox1{background:url(../images/logininfo1.png) no-repeat;}
+.loginbox1 ul li{margin-bottom:16px;}
+.yzm{width:341px; height:46px; background:url(../images/yzmbg.png) no-repeat; padding-bottom:5px;}
+.yzm span{display:block; float:left;width:227px; height:46px;}
+.yzm span input{background:none; border:none; width:183px; height:46px; line-height:46px;padding-left:44px;font-size:14px; color:#cee4f1;}
+.yzm .cite{float:right; width:114px; height:46px; line-height:46px; font-size:18px; color:#fff; text-align:center;border:0;}
+
+.loginbody1{background:url(../images/loginbg4.png) no-repeat center center; width:100%; height:585px; overflow:hidden; position:absolute; top:47px;}
+.systemlogo{width:100%; height:71px; margin-top:120px; text-align:center;display:block;}
+.loginbox0{width:810px;margin-top:0px;height:252px;}

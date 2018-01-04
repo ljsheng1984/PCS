@@ -1,0 +1,10 @@
+﻿* {margin:0;padding:0;}
+body {font-size:16px;color:#222;line-height:1.7;font-family:arial;}
+em {font-style:normal;}
+.wrap {max-width:700px;margin:0 auto;padding:15px;overflow:hidden;padding-top:10px;}
+.title {margin-bottom:8px;}
+.title h1 {font-size:20px;line-height:30px;overflow:hidden;text-align:center;font-weight:normal;border-bottom:1px solid #ddd;padding-bottom:5px;margin-bottom:15px;}
+.title p {font-size:14px;color:#888;}
+.title em {float:right;}
+.content img {max-width:100%;display:block;margin:0 auto;margin:10px auto;}
+.artical ul { margin:0;padding:0;float:left;list-style:none}

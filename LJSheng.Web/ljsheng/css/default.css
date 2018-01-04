@@ -1,0 +1,62 @@
+* {margin:0;padding:0;}
+html {height:100%;}
+body {font-size:12px;color:#444;font-family:arial,simsun;height:100%;margin-left:0;}
+img {border:0;}
+textarea, input {color:#444;font-family:Arial;font-size:12px;}
+ul,ol,dl {list-style:none;}
+.cf:before, .cf:after {content:"";display:table;}
+.cf:after {clear:both;}
+.cf {zoom:1;}
+select {border-radius:0;border:1px solid #bbb;}
+a {color:#3b4c65;text-decoration:none;}
+a:hover {text-decoration:underline;}
+.cont {float:right;width:100%;height:100%;}
+.cont2 {margin:15px;padding-bottom:15px;}
+#list {border-collapse:collapse;width:100%;border:1px solid #ddd;table-layout:fixed}
+#list tr {background:#e9f3ff;}
+#list th {background:url(../images/h2.gif);border:1px solid #ccc;height:34px;height:33px\9;text-align:left;padding:0 8px;}
+#list td {text-align:left;padding:8px;border:1px solid #cbdcee;border-top:1px solid #fff;white-space:normal;word-break: break-all;}
+.list2 {border-collapse:collapse;width:100%;border:1px solid #ddd;table-layout:fixed}
+.list2 tr {background:#fff}
+.list2 th {background:#ffebc7;border:1px solid #ccc;height:34px;height:33px\9;text-align:left;padding:0 8px;}
+.list2 td {text-align:left;padding:8px;border:1px solid #cbdcee;border-top:1px solid #fff;white-space:normal;word-break: break-all;}
+.list2 .td_n {background:#f2f8ff}
+.btn2 {margin:3px;padding:0 4px;border:1px solid #ccc;background:#fff url(../images/h2.gif) repeat-x;overflow:visible;height:20px;display:inline-block;vertical-align:middle;line-height:20px;color:#1c64b1;border:1px solid #ccc;box-sizeing:border-box;}
+.btn2:hover {background:#cfdae7 url(../images/head.png) right top;cursor:pointer;text-decoration:none;_text-decoration:underline;border:1px solid #2b7bb8;color:#fff;}
+#add {width:100%;border-collapse:collapse;margin-top:20px;}
+#add td {padding:8px;}
+#add td * {vertical-align:middle;}
+#add th {font-weight:normal;text-align:right;width:200px;}
+.tip {font-style:normal;margin-left:10px;color:#aaa;vertical-align:middle;}
+.txt {padding:8px 5px;width:200px;border:1px solid #ccc;border-bottom:1px solid #eee;border-right:1px solid #eee;background:#fdfdfd;}
+.btn_40 {height:40px;width:144px;background:url(../images/btn_40.png);color:#fff;font-size:16px;font-weight:bold;border:0 none;cursor:pointer;}
+.opera {overflow:hidden;zoom:1;border:1px solid #cfdae7;background:#eff0f5;margin-bottom:10px;border-radius:3px;}
+.opera .p {padding:7px 10px;border-top:1px solid #fefeff;border-bottom:1px solid #e4e5ee;}
+.opera  * {vertical-align:middle;}
+.opera input {vertical-align:middle;margin-right:5px;}
+.opera select {height:27px;line-height:27px;margin-right:3px;vertical-align:middle;*font-size:16px;color:#666;font-family:Microsoft YaHei;padding:2px;}
+.opera option {line-height:27px;}
+.txt1 {padding:6px 5px;width:200px;border:1px solid #ccc;border-bottom:1px solid #eee;border-right:1px solid #eee;background:#fff;}
+.btn1 {background:url(../images/btn1.gif);width:77px;height:28px;border:0 none;cursor:pointer;color:#fff;font-weight:bold;letter-spacing:2px;font-size:15px;font-family:Microsoft YaHei;}
+.page span {line-height:30px;margin:0 3px;}
+.page {text-align:center;margin:10px;}
+.page input,.page input {font-family:tahoma;display:inline-block;padding:5px 9px;border:1px solid #ccc;vertical-align:top;cursor:pointer;border-radius:3px;}
+.page .cur,.page .cur:hover {background:#1c64b1;color:#fff;border:1px solid #1c64b1;text-decoration:none;}
+.page input:hover{background:#ebf6ff;text-decoration:none;border:1px solid #b4cada;}
+.tbar_con {margin:15px;font-size:14px;line-height:1.8;}
+.n_d {float:left;line-height:28px;font-size:14px;margin-right:30px;}
+.n_d tt {font-weight:bold;color:#333;}
+.n_txt {overflow:hidden;padding:15px 0;padding-top:25px;font-size:14px;line-height:1.5;}
+.n_l {float:left;width:40%;margin-right:40px;}
+.n_r {float:left;width:40%;}
+.n_tit {color:#333;font-weight:bold;border-bottom:1px solid #ddd;padding-bottom:10px;margin-bottom:15px;}
+.n_ta {width:100%;padding:5px;border:1px solid #ddd;height:120px;resize:none;}
+.p_tab {border:1px solid #ddd;}
+.p_tit {background:#f6f1d4}
+.p_con {overflow:hidden;border-bottom:1px solid #ddd;border-left:0;padding-bottom:10px;}
+.p_con:nth-child(odd) {background:#f2f8ff;}
+.p_con:hover {background:#fffbea;}
+.p_tit li,.p_con li {float:left;width:31.5%;border-left:1px solid #ddd;border-bottom:1px solid #ddd;margin-left:-1px;padding:8px;}
+.p_tit li {font-weight:bold;font-size:14px;}
+.p_con li {padding-bottom:200px;margin-bottom:-200px;}
+.p2 .p_tit li,.p2 .p_con li {width:23.5%;}

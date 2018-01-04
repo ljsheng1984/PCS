@@ -1,0 +1,886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{442C5150-D6E0-4881-8B30-7634AF734BBA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LJSheng.Web</RootNamespace>
+    <AssemblyName>LJSheng.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\NPOI 2.2.0.0\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\NPOI 2.2.0.0\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\NPOI 2.2.0.0\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\NPOI 2.2.0.0\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\NPOI 2.2.0.0\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\hd.aspx" />
+    <Content Include="app\hdzl.aspx" />
+    <Content Include="app\xw.aspx" />
+    <Content Include="chajian\laydate\laydate.js" />
+    <Content Include="chajian\laydate\need\laydate.css" />
+    <Content Include="chajian\laydate\skins\dahong\icon.png" />
+    <Content Include="chajian\laydate\skins\dahong\laydate.css" />
+    <Content Include="chajian\laydate\skins\default\icon.png" />
+    <Content Include="chajian\laydate\skins\default\laydate.css" />
+    <Content Include="chajian\laydate\skins\molv\icon.png" />
+    <Content Include="chajian\laydate\skins\molv\laydate.css" />
+    <Content Include="chajian\laypage\laypage.js" />
+    <Content Include="chajian\laypage\skin\laypage.css" />
+    <Content Include="chajian\laytpl\laytpl.js" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\loading.gif" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="chajian\zTree\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="chajian\zTree\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="chajian\zTree\js\jquery.ztree.all-3.5.min.js" />
+    <Content Include="chajian\zTree\js\jquery.ztree.core-3.5.min.js" />
+    <Content Include="chajian\zTree\js\jquery.ztree.excheck-3.5.min.js" />
+    <Content Include="chajian\zTree\js\jquery.ztree.exedit-3.5.min.js" />
+    <Content Include="chajian\zTree\js\jquery.ztree.exedit.js" />
+    <Content Include="chajian\zTree\js\jquery.ztree.exhide-3.5.min.js" />
+    <Content Include="css\index.css" />
+    <Content Include="css\jiance.css" />
+    <Content Include="css\xiazai.css" />
+    <Content Include="demo\bc.aspx" />
+    <Content Include="demo\ssc.aspx" />
+    <Content Include="demo\test.aspx" />
+    <Content Include="hd.html" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\5.jpg" />
+    <Content Include="images\6.jpg" />
+    <Content Include="images\al.png" />
+    <Content Include="images\az.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bg2.jpg" />
+    <Content Include="images\clo.gif" />
+    <Content Include="images\fpzs.png" />
+    <Content Include="images\hover_left.png" />
+    <Content Include="images\hover_right.png" />
+    <Content Include="images\hs.png" />
+    <Content Include="images\line.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\opa2.png" />
+    <Content Include="images\pg.png" />
+    <Content Include="images\tip.png" />
+    <Content Include="images\weixin.jpg" />
+    <Content Include="js\china.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="js\jquery.event.drag.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.tmpl.js" />
+    <Content Include="js\jquery.touchSlider.js" />
+    <Content Include="js\jquery.validate.js" />
+    <Content Include="js\touchslider.js" />
+    <Content Include="ljsheng\api.aspx" />
+    <Content Include="ljsheng\biao.aspx" />
+    <Content Include="ljsheng\caidan.aspx" />
+    <Content Include="ljsheng\css\default.css" />
+    <Content Include="ljsheng\css\global.css" />
+    <Content Include="ljsheng\dbbak.aspx" />
+    <Content Include="ljsheng\denglu.aspx" />
+    <Content Include="ljsheng\lin\gjzau.aspx" />
+    <Content Include="ljsheng\lin\gjzlist.aspx" />
+    <Content Include="ljsheng\houtai.aspx" />
+    <Content Include="ljsheng\images\01.png" />
+    <Content Include="ljsheng\images\02.png" />
+    <Content Include="ljsheng\images\03.png" />
+    <Content Include="ljsheng\images\04.png" />
+    <Content Include="ljsheng\images\05.png" />
+    <Content Include="ljsheng\images\06.png" />
+    <Content Include="ljsheng\images\07.png" />
+    <Content Include="ljsheng\images\08.png" />
+    <Content Include="ljsheng\images\09.png" />
+    <Content Include="ljsheng\images\10.png" />
+    <Content Include="ljsheng\images\11.png" />
+    <Content Include="ljsheng\images\12.png" />
+    <Content Include="ljsheng\images\13.png" />
+    <Content Include="ljsheng\images\14.png" />
+    <Content Include="ljsheng\images\15.png" />
+    <Content Include="ljsheng\images\16.png" />
+    <Content Include="ljsheng\images\17.png" />
+    <Content Include="ljsheng\images\18.png" />
+    <Content Include="ljsheng\images\19.png" />
+    <Content Include="ljsheng\images\20.png" />
+    <Content Include="ljsheng\images\arr.png" />
+    <Content Include="ljsheng\images\arr5.png" />
+    <Content Include="ljsheng\images\btn1.gif" />
+    <Content Include="ljsheng\images\btn_40.png" />
+    <Content Include="ljsheng\images\buttonbg.png" />
+    <Content Include="ljsheng\images\cloud.png" />
+    <Content Include="ljsheng\images\h2.gif" />
+    <Content Include="ljsheng\images\h3.gif" />
+    <Content Include="ljsheng\images\head.png" />
+    <Content Include="ljsheng\images\lbtn.gif" />
+    <Content Include="ljsheng\images\light.png" />
+    <Content Include="ljsheng\images\light1.png" />
+    <Content Include="ljsheng\images\loading.gif" />
+    <Content Include="ljsheng\images\loginbg1.png" />
+    <Content Include="ljsheng\images\loginbg2.png" />
+    <Content Include="ljsheng\images\loginbg3.png" />
+    <Content Include="ljsheng\images\loginbg4.png" />
+    <Content Include="ljsheng\images\logininfo1.png" />
+    <Content Include="ljsheng\images\loginlogo.png" />
+    <Content Include="ljsheng\images\loginpassword.png" />
+    <Content Include="ljsheng\images\loginuser.png" />
+    <Content Include="ljsheng\images\logo.png" />
+    <Content Include="ljsheng\images\menubg.jpg" />
+    <Content Include="ljsheng\images\mt.png" />
+    <Content Include="ljsheng\images\nopic.png" />
+    <Content Include="ljsheng\images\sha.png" />
+    <Content Include="ljsheng\images\sha2.png" />
+    <Content Include="js\ljsheng.js" />
+    <Content Include="ljsheng\images\userbg.png" />
+    <Content Include="ljsheng\images\yzmbg.png" />
+    <Content Include="ljsheng\js\cloud.js" />
+    <Content Include="ljsheng\js\tab.js" />
+    <Content Include="ljsheng\lin\apibug.aspx" />
+    <Content Include="ljsheng\lin\appapi.aspx" />
+    <Content Include="ljsheng\lin\appau.aspx" />
+    <Content Include="ljsheng\lin\applist.aspx" />
+    <Content Include="ljsheng\lin\dhau.aspx" />
+    <Content Include="ljsheng\lin\dhlist.aspx" />
+    <Content Include="ljsheng\lin\duanxin.aspx" />
+    <Content Include="ljsheng\lin\dxau.aspx" />
+    <Content Include="ljsheng\lin\dxlist.aspx" />
+    <Content Include="ljsheng\lin\glyau.aspx" />
+    <Content Include="ljsheng\lin\glylist.aspx" />
+    <Content Include="ljsheng\lin\huodong.aspx" />
+    <Content Include="ljsheng\lin\hyau.aspx" />
+    <Content Include="ljsheng\lin\hylist.aspx" />
+    <Content Include="ljsheng\lin\jbhdlist.aspx" />
+    <Content Include="ljsheng\lin\jiance.aspx" />
+    <Content Include="ljsheng\lin\jpush.aspx" />
+    <Content Include="ljsheng\lin\jubao.aspx" />
+    <Content Include="ljsheng\lin\lanjie.aspx" />
+    <Content Include="ljsheng\lin\mcau.aspx" />
+    <Content Include="ljsheng\lin\mclist.aspx" />
+    <Content Include="ljsheng\lin\sendpush.aspx" />
+    <Content Include="ljsheng\lin\sendsms.aspx" />
+    <Content Include="ljsheng\lin\tuisong.aspx" />
+    <Content Include="ljsheng\lin\webau.aspx" />
+    <Content Include="ljsheng\lin\weblist.aspx" />
+    <Content Include="ljsheng\lin\xinwenau.aspx" />
+    <Content Include="ljsheng\lin\xinwenlist.aspx" />
+    <Content Include="ljsheng\lin\yhkau.aspx" />
+    <Content Include="ljsheng\lin\yhklist.aspx" />
+    <Content Include="ljsheng\lin\yjfk.aspx" />
+    <Content Include="ljsheng\lin\yjtp.aspx" />
+    <Content Include="ljsheng\lin\zdlist.aspx" />
+    <Content Include="ljsheng\lin\zfhdlist.aspx" />
+    <Content Include="ljsheng\lin\zidian.aspx" />
+    <Content Include="ljsheng\runapi.aspx" />
+    <Content Include="ljsheng\shouye.aspx" />
+    <Content Include="ljsheng\title.html" />
+    <Content Include="ljsheng\top.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="chajian\umeditor\net\getContent.ashx" />
+    <Content Include="chajian\umeditor\net\imageUp.ashx" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.eot" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.ttf" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.woff" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.eot" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.ttf" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.woff" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.eot" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.ttf" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.woff" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.eot" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.ttf" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.woff" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\Symbola.eot" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\Symbola.otf" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\Symbola.ttf" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\Symbola.woff" />
+    <Content Include="weixin\jcxq.aspx" />
+    <Content Include="weixin\jiance.aspx" />
+    <Content Include="weixin\openid.aspx" />
+    <Content Include="xiazai.html" />
+    <Content Include="ajax\api.ashx" />
+    <Content Include="zhibo.aspx" />
+    <Content Include="zhibo.html" />
+    <None Include="Properties\PublishProfiles\aixuexi.pubxml" />
+    <None Include="Properties\PublishProfiles\pcs.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="weixin\wxurl.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="chajian\layer\extend\layer.ext.js" />
+    <Content Include="chajian\layer\layer.js" />
+    <Content Include="chajian\layer\skin\default\icon-ext.png" />
+    <Content Include="chajian\layer\skin\default\icon.png" />
+    <Content Include="chajian\layer\skin\default\loading-0.gif" />
+    <Content Include="chajian\layer\skin\default\loading-1.gif" />
+    <Content Include="chajian\layer\skin\default\loading-2.gif" />
+    <Content Include="chajian\layer\skin\layer.css" />
+    <Content Include="chajian\layer\skin\layer.ext.css" />
+    <Content Include="chajian\umeditor\dialogs\emotion\emotion.css" />
+    <Content Include="chajian\umeditor\dialogs\emotion\emotion.js" />
+    <Content Include="chajian\umeditor\dialogs\emotion\images\0.gif" />
+    <Content Include="chajian\umeditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="chajian\umeditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="chajian\umeditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="chajian\umeditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="chajian\umeditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="chajian\umeditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="chajian\umeditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="chajian\umeditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="chajian\umeditor\dialogs\formula\formula.css" />
+    <Content Include="chajian\umeditor\dialogs\formula\formula.html" />
+    <Content Include="chajian\umeditor\dialogs\formula\formula.js" />
+    <Content Include="chajian\umeditor\dialogs\formula\images\formula.png" />
+    <Content Include="chajian\umeditor\dialogs\image\image.css" />
+    <Content Include="chajian\umeditor\dialogs\image\image.js" />
+    <Content Include="chajian\umeditor\dialogs\image\images\close.png" />
+    <Content Include="chajian\umeditor\dialogs\image\images\upload1.png" />
+    <Content Include="chajian\umeditor\dialogs\image\images\upload2.png" />
+    <Content Include="chajian\umeditor\dialogs\link\link.js" />
+    <Content Include="chajian\umeditor\dialogs\map\map.html" />
+    <Content Include="chajian\umeditor\dialogs\map\map.js" />
+    <Content Include="chajian\umeditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="chajian\umeditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="chajian\umeditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="chajian\umeditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="chajian\umeditor\dialogs\video\video.css" />
+    <Content Include="chajian\umeditor\dialogs\video\video.js" />
+    <Content Include="chajian\umeditor\index.html" />
+    <Content Include="chajian\umeditor\lang\en\en.js" />
+    <Content Include="chajian\umeditor\lang\en\images\addimage.png" />
+    <Content Include="chajian\umeditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="chajian\umeditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="chajian\umeditor\lang\en\images\background.png" />
+    <Content Include="chajian\umeditor\lang\en\images\button.png" />
+    <Content Include="chajian\umeditor\lang\en\images\copy.png" />
+    <Content Include="chajian\umeditor\lang\en\images\deletedisable.png" />
+    <Content Include="chajian\umeditor\lang\en\images\deleteenable.png" />
+    <Content Include="chajian\umeditor\lang\en\images\imglabel.png" />
+    <Content Include="chajian\umeditor\lang\en\images\listbackground.png" />
+    <Content Include="chajian\umeditor\lang\en\images\localimage.png" />
+    <Content Include="chajian\umeditor\lang\en\images\music.png" />
+    <Content Include="chajian\umeditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="chajian\umeditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="chajian\umeditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="chajian\umeditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="chajian\umeditor\lang\en\images\upload.png" />
+    <Content Include="chajian\umeditor\lang\zh-cn\images\copy.png" />
+    <Content Include="chajian\umeditor\lang\zh-cn\images\imglabel.png" />
+    <Content Include="chajian\umeditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="chajian\umeditor\lang\zh-cn\images\music.png" />
+    <Content Include="chajian\umeditor\lang\zh-cn\images\upload.png" />
+    <Content Include="chajian\umeditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="chajian\umeditor\themes\default\css\umeditor.css" />
+    <Content Include="chajian\umeditor\themes\default\css\umeditor.min.css" />
+    <Content Include="chajian\umeditor\themes\default\images\caret.png" />
+    <Content Include="chajian\umeditor\themes\default\images\close.png" />
+    <Content Include="chajian\umeditor\themes\default\images\icons.gif" />
+    <Content Include="chajian\umeditor\themes\default\images\icons.png" />
+    <Content Include="chajian\umeditor\themes\default\images\ok.gif" />
+    <Content Include="chajian\umeditor\themes\default\images\pop-bg.png" />
+    <Content Include="chajian\umeditor\themes\default\images\spacer.gif" />
+    <Content Include="chajian\umeditor\themes\default\images\videologo.gif" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\STIXFontLicense2010.txt" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.svg" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.svg" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.svg" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.svg" />
+    <Content Include="chajian\umeditor\third-party\mathquill\font\Symbola.svg" />
+    <Content Include="chajian\umeditor\third-party\mathquill\mathquill.css" />
+    <Content Include="chajian\umeditor\third-party\mathquill\mathquill.js" />
+    <Content Include="chajian\umeditor\third-party\mathquill\mathquill.min.js" />
+    <Content Include="chajian\umeditor\umeditor.config.js" />
+    <Content Include="chajian\umeditor\umeditor.js" />
+    <Content Include="chajian\umeditor\umeditor.min.js" />
+    <Content Include="loginout.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ajax\api.ashx.cs">
+      <DependentUpon>api.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\linjiansheng.cs" />
+    <Compile Include="ajax\Office\CsvHelper.cs" />
+    <Compile Include="ajax\Office\DataRowExportColumn.cs" />
+    <Compile Include="ajax\Office\ExcelHelper.cs" />
+    <Compile Include="ajax\Office\ExportColumn.cs" />
+    <Compile Include="ajax\Office\IExportColumn.cs" />
+    <Compile Include="ajax\Office\IStringWriter.cs" />
+    <Compile Include="ajax\Office\OfficeType.cs" />
+    <Compile Include="ajax\Office\StringWriter.cs" />
+    <Compile Include="app\hd.aspx.cs">
+      <DependentUpon>hd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\hd.aspx.designer.cs">
+      <DependentUpon>hd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\hdzl.aspx.cs">
+      <DependentUpon>hdzl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\hdzl.aspx.designer.cs">
+      <DependentUpon>hdzl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\xw.aspx.cs">
+      <DependentUpon>xw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\xw.aspx.designer.cs">
+      <DependentUpon>xw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chajian\umeditor\net\Uploader.cs" />
+    <Compile Include="demo\bc.aspx.cs">
+      <DependentUpon>bc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo\bc.aspx.designer.cs">
+      <DependentUpon>bc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demo\ssc.aspx.cs">
+      <DependentUpon>ssc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo\ssc.aspx.designer.cs">
+      <DependentUpon>ssc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demo\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\api.aspx.cs">
+      <DependentUpon>api.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\api.aspx.designer.cs">
+      <DependentUpon>api.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\biao.aspx.cs">
+      <DependentUpon>biao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\biao.aspx.designer.cs">
+      <DependentUpon>biao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\caidan.aspx.cs">
+      <DependentUpon>caidan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\caidan.aspx.designer.cs">
+      <DependentUpon>caidan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\CheckLoginPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\dbbak.aspx.cs">
+      <DependentUpon>dbbak.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\dbbak.aspx.designer.cs">
+      <DependentUpon>dbbak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\denglu.aspx.cs">
+      <DependentUpon>denglu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\denglu.aspx.designer.cs">
+      <DependentUpon>denglu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\gjzau.aspx.cs">
+      <DependentUpon>gjzau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\gjzau.aspx.designer.cs">
+      <DependentUpon>gjzau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\gjzlist.aspx.cs">
+      <DependentUpon>gjzlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\gjzlist.aspx.designer.cs">
+      <DependentUpon>gjzlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\houtai.aspx.cs">
+      <DependentUpon>houtai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\houtai.aspx.designer.cs">
+      <DependentUpon>houtai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\apibug.aspx.cs">
+      <DependentUpon>apibug.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\apibug.aspx.designer.cs">
+      <DependentUpon>apibug.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\appapi.aspx.cs">
+      <DependentUpon>appapi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\appapi.aspx.designer.cs">
+      <DependentUpon>appapi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\appau.aspx.cs">
+      <DependentUpon>appau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\appau.aspx.designer.cs">
+      <DependentUpon>appau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\applist.aspx.cs">
+      <DependentUpon>applist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\applist.aspx.designer.cs">
+      <DependentUpon>applist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\dhau.aspx.cs">
+      <DependentUpon>dhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\dhau.aspx.designer.cs">
+      <DependentUpon>dhau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\dhlist.aspx.cs">
+      <DependentUpon>dhlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\dhlist.aspx.designer.cs">
+      <DependentUpon>dhlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\duanxin.aspx.cs">
+      <DependentUpon>duanxin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\duanxin.aspx.designer.cs">
+      <DependentUpon>duanxin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\dxau.aspx.cs">
+      <DependentUpon>dxau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\dxau.aspx.designer.cs">
+      <DependentUpon>dxau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\dxlist.aspx.cs">
+      <DependentUpon>dxlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\dxlist.aspx.designer.cs">
+      <DependentUpon>dxlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\glyau.aspx.cs">
+      <DependentUpon>glyau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\glyau.aspx.designer.cs">
+      <DependentUpon>glyau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\glylist.aspx.cs">
+      <DependentUpon>glylist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\glylist.aspx.designer.cs">
+      <DependentUpon>glylist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\huodong.aspx.cs">
+      <DependentUpon>huodong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\huodong.aspx.designer.cs">
+      <DependentUpon>huodong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\hyau.aspx.cs">
+      <DependentUpon>hyau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\hyau.aspx.designer.cs">
+      <DependentUpon>hyau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\hylist.aspx.cs">
+      <DependentUpon>hylist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\hylist.aspx.designer.cs">
+      <DependentUpon>hylist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\jbhdlist.aspx.cs">
+      <DependentUpon>jbhdlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\jbhdlist.aspx.designer.cs">
+      <DependentUpon>jbhdlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\jiance.aspx.cs">
+      <DependentUpon>jiance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\jiance.aspx.designer.cs">
+      <DependentUpon>jiance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\jpush.aspx.cs">
+      <DependentUpon>jpush.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\jpush.aspx.designer.cs">
+      <DependentUpon>jpush.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\jubao.aspx.cs">
+      <DependentUpon>jubao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\jubao.aspx.designer.cs">
+      <DependentUpon>jubao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\lanjie.aspx.cs">
+      <DependentUpon>lanjie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\lanjie.aspx.designer.cs">
+      <DependentUpon>lanjie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\mcau.aspx.cs">
+      <DependentUpon>mcau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\mcau.aspx.designer.cs">
+      <DependentUpon>mcau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\mclist.aspx.cs">
+      <DependentUpon>mclist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\mclist.aspx.designer.cs">
+      <DependentUpon>mclist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\sendpush.aspx.cs">
+      <DependentUpon>sendpush.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\sendpush.aspx.designer.cs">
+      <DependentUpon>sendpush.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\sendsms.aspx.cs">
+      <DependentUpon>sendsms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\sendsms.aspx.designer.cs">
+      <DependentUpon>sendsms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\tuisong.aspx.cs">
+      <DependentUpon>tuisong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\tuisong.aspx.designer.cs">
+      <DependentUpon>tuisong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\webau.aspx.cs">
+      <DependentUpon>webau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\webau.aspx.designer.cs">
+      <DependentUpon>webau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\weblist.aspx.cs">
+      <DependentUpon>weblist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\weblist.aspx.designer.cs">
+      <DependentUpon>weblist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\xinwenau.aspx.cs">
+      <DependentUpon>xinwenau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\xinwenau.aspx.designer.cs">
+      <DependentUpon>xinwenau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\xinwenlist.aspx.cs">
+      <DependentUpon>xinwenlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\xinwenlist.aspx.designer.cs">
+      <DependentUpon>xinwenlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\yhkau.aspx.cs">
+      <DependentUpon>yhkau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\yhkau.aspx.designer.cs">
+      <DependentUpon>yhkau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\yhklist.aspx.cs">
+      <DependentUpon>yhklist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\yhklist.aspx.designer.cs">
+      <DependentUpon>yhklist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\yjfk.aspx.cs">
+      <DependentUpon>yjfk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\yjfk.aspx.designer.cs">
+      <DependentUpon>yjfk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\yjtp.aspx.cs">
+      <DependentUpon>yjtp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\yjtp.aspx.designer.cs">
+      <DependentUpon>yjtp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\zdlist.aspx.cs">
+      <DependentUpon>zdlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\zdlist.aspx.designer.cs">
+      <DependentUpon>zdlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\zfhdlist.aspx.cs">
+      <DependentUpon>zfhdlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\zfhdlist.aspx.designer.cs">
+      <DependentUpon>zfhdlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\lin\zidian.aspx.cs">
+      <DependentUpon>zidian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\lin\zidian.aspx.designer.cs">
+      <DependentUpon>zidian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\runapi.aspx.cs">
+      <DependentUpon>runapi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\runapi.aspx.designer.cs">
+      <DependentUpon>runapi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\shouye.aspx.cs">
+      <DependentUpon>shouye.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\shouye.aspx.designer.cs">
+      <DependentUpon>shouye.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ljsheng\top.aspx.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ljsheng\top.aspx.designer.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginout.aspx.cs">
+      <DependentUpon>loginout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginout.aspx.designer.cs">
+      <DependentUpon>loginout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="weixin\jcxq.aspx.cs">
+      <DependentUpon>jcxq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="weixin\jcxq.aspx.designer.cs">
+      <DependentUpon>jcxq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="weixin\jiance.aspx.cs">
+      <DependentUpon>jiance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="weixin\jiance.aspx.designer.cs">
+      <DependentUpon>jiance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="weixin\openid.aspx.cs">
+      <DependentUpon>openid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="weixin\openid.aspx.designer.cs">
+      <DependentUpon>openid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="weixin\wxurl.ashx.cs">
+      <DependentUpon>wxurl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="zhibo.aspx.cs">
+      <DependentUpon>zhibo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zhibo.aspx.designer.cs">
+      <DependentUpon>zhibo.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="uploadfiles\" />
+    <Folder Include="zhibo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LJSheng.Common\LJSheng.Common.csproj">
+      <Project>{e5dc1ea6-856a-4250-8dee-6f1d2247fd9a}</Project>
+      <Name>LJSheng.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LJSheng.Data\LJSheng.Data.csproj">
+      <Project>{c6f51766-062b-40a2-bd60-92dba5beed4c}</Project>
+      <Name>LJSheng.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LJSheng.WX\LJSheng.WX.csproj">
+      <Project>{5d6bf305-9e75-4406-ab03-729d1b351f9b}</Project>
+      <Name>LJSheng.WX</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>39934</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5188/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

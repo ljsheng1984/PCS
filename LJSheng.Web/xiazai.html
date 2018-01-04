@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Keywords" content="防骗助手APP 智能拦截诈骗短信 预防诈骗" />
+    <meta name="Description" content="防骗助手APP 智能拦截诈骗短信 预防诈骗" />
+    <title>防骗助手APP fpzs110.com</title>
+    <link href="css/xiazai.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.event.drag.js"></script>
+    <script src="js/jquery.touchSlider.js"></script>
+    <script type="text/javascript">
+        function is_weixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                document.getElementById("tip").style.display = "block";
+                alert("微信里不允许下载文件,请看顶部的提示进行下载操作!");
+            } else {
+                self.location = "/app/fpzs.apk";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="tip" class="tip2">
+        <img src="images/tip.png" />
+    </div>
+    <div class="wrap">
+        <div class="top">
+            <p class="t_bg"></p>
+            <div class="con">
+                <p class="r"><a href="#">关于我们</a><a href="#">下载</a></p><a class="abtn a2" href="#">下载使用说明>></a>
+                <p class="logo"><img src="images/logo.png" /><span>防骗助手</span></p>
+
+            </div>
+        </div>
+        <div class="content">
+            <p class="cp">
+                <a id="android" onclick="is_weixin();" class="az"></a>
+                <a id="iphone" href="javascript:alert('即将推出!!!')" class="pg"></a><br />
+                <a class="abtn" href="#">安装前必看>></a>
+            </p>
+        </div>
+        <div class="footer">
+            <p>防骗助手 Copyright © 版权所有</p>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div class="abox">
+        <p class="clo"></p>
+        <div class="img_gallery">
+            <div class="main_img">
+                <ul style="width: 1399px; overflow: visible;">
+                    <li><span class="img_1"><img src="images/1.jpg" /></span></li>
+                    <li><span class="img_2"><img src="images/2.jpg" /></span></li>
+                    <li><span class="img_3"><img src="images/3.jpg" /></span></li>
+                    <li><span class="img_4"><img src="images/4.jpg" /></span></li>
+                    <li><span class="img_5"><img src="images/5.jpg" /></span></li>
+                    <li><span class="img_5"><img src="images/6.jpg" /></span></li>
+                </ul>
+                <a href="javascript:;" id="btn_prev"></a>
+                <a href="javascript:;" id="btn_next"></a>
+            </div>
+            <div class="point">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+$(document).ready(function(){
+	$(".img_gallery").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+
+	$dragBln = false;
+
+	$(".main_img").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".point a"),
+		counter : function (e){
+			$(".point a").removeClass("on").eq(e.current-1).addClass("on");//图片顺序点切换
+			$(".img_font span").hide().eq(e.current-1).show();//图片文字切换
+		}
+	});
+
+	$(".main_img").bind("mousedown", function() {
+		$dragBln = false;
+	});
+
+	$(".main_img").bind("dragstart", function() {
+		$dragBln = true;
+	});
+
+	$(".main_img a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 5000);
+
+	$(".img_gallery").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},5000);
+	});
+
+	$(".main_img").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+	});
+
+	$(".abtn").click(function(){
+		$(".mask").fadeIn(400);
+		$(".abox").css("visibility","visible");
+	})
+	$(".clo").click(function(){
+		$(".mask").fadeOut(400);
+		$(".abox").css("visibility","hidden");
+	})
+});
+    </script>
+    <script type="text/javascript">
+        //检测浏览器语言 - 我爱你爱久久 - 520299.com
+        currentLang = navigator.language;   //判断除IE外其他浏览器使用语言
+        if (!currentLang) {//判断IE浏览器使用语言
+            currentLang = navigator.browserLanguage;
+        }
+        //判断访问终端 - 我爱你爱久久 - 520299.com
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+        if (browser.versions.mobile == true) {
+            //如果是苹果浏览器 - 我爱你爱久久 - 520299.com
+            if (browser.versions.iPhone == true) {
+                document.getElementById("android").style.display = "none";
+                self.location = "itms-apps://itunes.apple.com/app/id885684720?mt=8";
+            }
+            else {
+                //如果是安卓浏览器 - 我爱你爱久久 - 520299.com
+                if (browser.versions.android == true) {
+                    document.getElementById("iphone").style.display = "none";
+                    //判断是否在微信里打开 - 我爱你爱久久 - 520299.com
+                    var ua = navigator.userAgent.toLowerCase();
+                    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                        document.getElementById("tip").style.display = "block";
+                    } else {
+                        //不在微信里是否自动跳转下载 - 我爱你爱久久 - 520299.com
+                        //self.location = "tzr.apk";
+                    }
+                }
+            }
+        }
+        //document.writeln("语言版本: " + browser.language);
+        //document.writeln(" 是否为移动终端: " + browser.versions.mobile);
+        //document.writeln(" ios终端: " + browser.versions.ios);
+        //document.writeln(" android终端: " + browser.versions.android);
+        //document.writeln(" 是否为iPhone: " + browser.versions.iPhone);
+        //document.writeln(" 是否iPad: " + browser.versions.iPad);
+        //document.writeln(navigator.userAgent);
+        //alert(currentLang);//zh-cn
+        //browser.versions.trident;//返回真假，真则是IE内核，以此类推browser.versions.webKit是否为谷歌内核
+        //if (browser.versions.trident) {
+        //    alert("is IE");  //is IE
+        //}
+        //if (browser.versions.webKit) {
+        //    alert("is webKit");
+        //}
+    </script>
+</body>
+</html>

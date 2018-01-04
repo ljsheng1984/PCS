@@ -1,0 +1,43 @@
+﻿* {margin:0;padding:0;}
+ul,ol,dl {list-style:none;}
+em {font-style:normal;}
+b {font-weight:normal;}
+a{text-decoration:none}
+img {border:0;}
+body {width:6.4rem;margin:0 auto;font-size:16px;color:#111;}
+.top {height:.8rem;background:#F93;color:#fff;text-align:center;line-height:.8rem;font-size:.3rem;}
+.bot {height:.8rem;background:#fafafa;color:#444;text-align:center;line-height:.8rem;font-size:.3rem;}
+.containner {max-width:700px;margin:0 auto;overflow:hidden;}
+.form {background:#426ae4;height:4.2rem;padding-top:.2rem;}
+.f_inner {width:5.3rem;margin:0 auto;}
+.txt {background:#f5f5f5;display:block;border:0;border-radius:5px;outline:none;padding:3%;width:94%;height:2.5rem;font-size:16px;margin-bottom:.25rem;border-bottom:2px solid #fe9005;}
+.btn {height:.8rem;width:48%;background:#6186f8;border:0;font-size:18px;color:#fff;outline:none;cursor:pointer;border-radius:4px;}
+.btn:active {background:#3b62da;}
+.l {float:left;}
+.r {float:right;}
+.tit {height:.7rem;line-height:.7rem;padding:0 .7rem;background:#ebf1ff url(../images/hs.png) no-repeat .2rem center;background-size:.45rem;margin-bottom:.25rem;}
+.tit2 {background:#fff url(../images/al.png) no-repeat .2rem center;background-size:.45rem;border-bottom:1px solid #ddd;margin-bottom:0;}
+
+.t_list li {width:87%;border:2px solid #ddd;border-radius:4px;margin:0 auto;margin-bottom:.25rem;padding:3%;}
+.t_list tt {border-bottom:1px solid #ddd;height:.7rem;line-height:.7rem;display:block;margin-bottom:.2rem;margin-top:-.1rem;}
+.t_list tt b {color:#f50;margin-right:.1rem;}
+.t_list .mess {font-size:14px;color:#888;margin-bottom:.1rem;}
+.t_list small,.d1 small {display:block;text-align:right;color:#aaa;}
+.t_list2 ul {background:#fff;}
+.t_list2 li {width:auto;border:0;border-bottom:1px solid #ddd;padding:3% 0;margin:0 4%;border-radius:0;}
+.t_list2 li:last-child{border:0;}
+.t_list2 .mess {color:#777;font-size:15px;}
+.lj {height:.7rem;line-height:.7rem;background:#ff912f;color:#fff;font-size:18px;padding:0 .2rem;}
+.d1 {background:#fff;padding:.2rem;overflow:hidden;margin-bottom:.25rem;}
+.d1 .mess {margin-bottom:.1rem;}
+.line {height:.6rem;background:url(../images/line.png) no-repeat 0 center;background-size:100%;}
+.cx {}
+.cx b {color:#f50;}
+.btn2 {height:.6rem;background:#416ae5;color:#fff;font-size:18px;border:0;width:1.5rem;border-radius:4px;}
+.d1 .li {height:.6rem;line-height:.6rem;}
+
+@media screen and (min-width:420px){
+	body {font-size:20px;}
+	.txt {font-size:20px;}
+	.btn {font-size:22px;}
+}

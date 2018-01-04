@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LJSheng.API", "LJSheng.API\LJSheng.API.csproj", "{ED8DAA52-6953-4DF1-BFD9-03BED11AA0D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LJSheng.Common", "LJSheng.Common\LJSheng.Common.csproj", "{E5DC1EA6-856A-4250-8DEE-6F1D2247FD9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LJSheng.Web", "LJSheng.Web\LJSheng.Web.csproj", "{442C5150-D6E0-4881-8B30-7634AF734BBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LJSheng.Data", "LJSheng.Data\LJSheng.Data.csproj", "{C6F51766-062B-40A2-BD60-92DBA5BEED4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LJSheng.jpush.api", "LJSheng.jpush.api\LJSheng.jpush.api.csproj", "{E281D457-F259-4F0B-8608-16C81D8AE97B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LJSheng.WX", "LJSheng.WX\LJSheng.WX.csproj", "{5D6BF305-9E75-4406-AB03-729D1B351F9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED8DAA52-6953-4DF1-BFD9-03BED11AA0D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED8DAA52-6953-4DF1-BFD9-03BED11AA0D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED8DAA52-6953-4DF1-BFD9-03BED11AA0D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED8DAA52-6953-4DF1-BFD9-03BED11AA0D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5DC1EA6-856A-4250-8DEE-6F1D2247FD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DC1EA6-856A-4250-8DEE-6F1D2247FD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DC1EA6-856A-4250-8DEE-6F1D2247FD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DC1EA6-856A-4250-8DEE-6F1D2247FD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{442C5150-D6E0-4881-8B30-7634AF734BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{442C5150-D6E0-4881-8B30-7634AF734BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{442C5150-D6E0-4881-8B30-7634AF734BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{442C5150-D6E0-4881-8B30-7634AF734BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F51766-062B-40A2-BD60-92DBA5BEED4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F51766-062B-40A2-BD60-92DBA5BEED4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F51766-062B-40A2-BD60-92DBA5BEED4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F51766-062B-40A2-BD60-92DBA5BEED4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E281D457-F259-4F0B-8608-16C81D8AE97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E281D457-F259-4F0B-8608-16C81D8AE97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E281D457-F259-4F0B-8608-16C81D8AE97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E281D457-F259-4F0B-8608-16C81D8AE97B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D6BF305-9E75-4406-AB03-729D1B351F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6BF305-9E75-4406-AB03-729D1B351F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6BF305-9E75-4406-AB03-729D1B351F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6BF305-9E75-4406-AB03-729D1B351F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
